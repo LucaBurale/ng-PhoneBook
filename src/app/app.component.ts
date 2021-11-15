@@ -6,16 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-PhoneBook';
+  title = 'PhoneBook di Luca Burale';
   list:any[]=[]
+
+
 
   addContact(contact:string) {
     this.list.push({id:this.list.length,name:contact});
-    console.warn(this.list)
+    console.warn(this.list);
   }
 
   removeContact(id:any) {
-    this.list=this.list.filter(contact=>contact.id!=id)
-
+    this.list=this.list.filter(contact => contact.id!=id)
   }
 }
+
+

@@ -1,10 +1,20 @@
 <h1>{{ title }}</h1>
-<input type="text" placeholder="aggiungi un contatto" #task>
-<br>
-<br>
-<button (click)="addContact(task.value)">aggiungi nuovo contatto</button>
-<br>
+<div class="container">
+ <input type="text" placeholder="aggiungi nome, cognome e numero di telefono" #task>
+  <!-- <input type="text" placeholder="aggiungi cognome" #task> -->
+  <!-- <input type="text" placeholder="aggiungi numero" #task> -->
+
+ <button class="add btn btn-warning" (click)="addContact(task.value)">aggiungi contatto</button>
+ <br>
+ <br>
+</div>
 <br>
 
-<ul *ngFor="let contact of list"><li>{{ contact.name }} <button (click)="removeContact(contact.id)">cancella</button></li></ul>
+  <ul class="line nostyle">
+  <li>Mario, Rossi, 111-222-3456789</li>
+  <li>Maria, Verdi, 222-222-3456789</li>
+  <li>Giovanna, Bianchi, 111-222-3456789</li>
+  </ul>
+  <hr>
+<ul class="line nostyle" *ngFor="let contact of list"><li>{{ contact.name }} <button class="btn btn-danger" (click)="removeContact(contact.id)">cancella</button></li></ul>
 

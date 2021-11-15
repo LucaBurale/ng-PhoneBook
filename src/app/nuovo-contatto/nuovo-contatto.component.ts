@@ -12,4 +12,5 @@ export class NuovoContattoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }
